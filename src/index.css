@@ -1,0 +1,124 @@
+:root {
+  --bg-deep: #0e1220;
+  --bg-panel: #161b2e;
+  --bg-panel-raised: #1c2238;
+  --line: #2a3150;
+  --line-bright: #3a4266;
+  --paper: #eae7dd;
+  --muted: #9aa3c0;
+  --muted-dim: #6b7394;
+  --amber: #e8a33d;
+  --amber-dim: #c98a2e;
+  --teal: #5fa3a0;
+  --teal-dim: #3d6f6d;
+
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  --container: 1120px;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg-deep);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(95, 163, 160, 0.08), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(232, 163, 61, 0.06), transparent 40%);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--paper);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--bg-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--teal);
+  display: inline-block;
+}
+
+section {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+@media (max-width: 720px) {
+  section {
+    padding: 64px 0;
+  }
+}

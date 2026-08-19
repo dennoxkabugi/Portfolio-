@@ -1,4 +1,4 @@
-# Dudley — Portfolio
+# Dennis Kabugi — Portfolio
 
 A React + Vite portfolio site.
 
@@ -19,11 +19,6 @@ npm run build
 
 Output goes to `dist/` — deploy that folder to Render, Vercel, Netlify, or GitHub Pages.
 
-## Before you publish
-
-- Update the placeholder email, GitHub, and Upwork links in `src/components/Contact.jsx`.
-- Swap in real project screenshots if you'd rather not use the abstract browser mockup in `src/components/Projects.jsx`.
-- The coursework list in `src/components/Coursework.jsx` reflects the current CSC/MAT cycle — update it each semester.
 
 ## Structure
 
